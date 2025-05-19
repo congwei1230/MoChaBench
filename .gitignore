@@ -15,3 +15,4 @@ venv/
 **/cache/**
 **/runs/**
 eval-lipsync/data
+extract_first_frame.py

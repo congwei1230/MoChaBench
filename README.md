@@ -73,7 +73,7 @@ pip install -r requirements.txt
 ```
 
 ### Overview
-This script is adapted from [joonson/syncnet_python](https://github.com/joonson/syncnet_python) for improved API and code structure.
+The SyncNet codebase is adapted from [joonson/syncnet_python](https://github.com/joonson/syncnet_python) for improved API and code structure.
 
 Follows a HuggingFace Diffuser-style structure.
 We provided a
@@ -90,7 +90,7 @@ pipe = SyncNetPipeline(
     device="cuda",          # or "cpu"
 )
 ```
-It has a `inference` function to score a single pair of video and speech(denoised from audio)
+It has an `inference` function to score a single pair of video and speech(with speech denoised from the audio)
 ```
 results = pipe.inference(
     video_path="../example/video.avi",   # RGB video
