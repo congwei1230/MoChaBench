@@ -56,7 +56,7 @@ Thanks to the community for sharing —
 
 
 
-## Evaluate Lip Sync Scores with SyncNet:
+## ▶️ Evaluate Lip Sync Scores with SyncNet:
 
 ### Download this repo
 [SyncNet Weights](https://github.com/congwei1230/MoChaBench/tree/main/eval-lipsync/weights), [Benchmark](https://github.com/congwei1230/MoChaBench/tree/main/benchmark) and [MoCha's Generation Results](https://github.com/congwei1230/MoChaBench/tree/main/mocha-generation) are embedded in this git repo
@@ -130,3 +130,16 @@ cd eval-lipsync\script
 python run_syncnet_pipeline_on_mocha_generation_on_mocha_bench.py
 ```
 
+
+## 📚 Citation
+
+🌟 If you find our work helpful, please leave us a star and cite our paper.
+
+```bibtex
+@article{wei2025mocha,
+  title={MoCha: Towards Movie-Grade Talking Character Synthesis},
+  author={Wei, Cong and Sun, Bo and Ma, Haoyu and Hou, Ji and Juefei-Xu, Felix and He, Zecheng and Dai, Xiaoliang and Zhang, Luxin and Li, Kunpeng and Hou, Tingbo and others},
+  journal={arXiv preprint arXiv:2503.23307},
+  year={2025}
+}
+```
