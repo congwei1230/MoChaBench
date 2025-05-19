@@ -30,6 +30,10 @@ Thanks to the community for sharing —
 <img style="height:16pt" src="https://img.shields.io/badge/-Tweet3-blue?style=flat&logo=twitter"></a>
 <br>
 
+<div align="center">
+  <img src="assets/narrative.gif" alt="MoCha" width="70%"/>
+</div>
+
 ### 🏆 MoCha Benchmark Leaderboard
 
 | Task |  Model | Sync-Dist. ↓ | Sync-Conf. ↑ |
