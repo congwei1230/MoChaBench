@@ -1,0 +1,17 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore virtual environments
+env/
+venv/
+
+# Ignore temp files
+*.log
+*.tmp
+.DS_Store
+
+
+**/cache/**
+**/runs/**
+eval-lipsync/data
