@@ -1,40 +1,49 @@
 # MoChaBench
 
+This repo contains the `Benchmark`, `Evaluation Code` and `MoCha's Generation Results` for [MoCha
+Towards Movie-Grade Talking Character Synthesis](https://arxiv.org/pdf/2503.23307).
 
-## 🏆 Leaderboard
+<a target="_blank" href="https://arxiv.org/pdf/2503.23307">
+<img style="height:22pt" src="https://img.shields.io/badge/-Paper-black?style=flat&logo=arxiv"></a>
+<a target="_blank" href="https://congwei1230.github.io/MoCha/">
+<img style="height:22pt" src="https://img.shields.io/badge/-🌐%20Website-black?style=flat"></a>
+<a target="_blank" href="https://huggingface.co/datasets/CongWei1230/MoChaBench">
+<a target="_blank" href="https://github.com/congwei1230/MoChaBench/tree/main/benchmark">
+<img style="height:22pt" src="https://img.shields.io/badge/-MoChaBench-red?style=flat&logo=github"></a>
+<a target="_blank" href="https://github.com/congwei1230/MoChaBench/tree/main/mocha-generation">
+<img style="height:22pt" src="https://img.shields.io/badge/-Our Results on MoChaBench-red?style=flat&logo=github"></a>
+<br>
+<a target="_blank" href="https://huggingface.co/datasets/CongWei1230/MoCha-Generation-on-MoChaBench">
+<img style="height:22pt" src="https://img.shields.io/badge/-🤗%20Visualizing Our Results on MoChaBench-yellow?style=flat"></a>
+<a target="_blank" href="https://huggingface.co/datasets/CongWei1230/MoChaBench">
+<img style="height:22pt" src="https://img.shields.io/badge/-🤗%20Visualizing MoChaBench-yellow?style=flat"></a>
 
-### Per-Category Averages
+### 🏆 MoCha Benchmark Leaderboard
 
-| Category                      | Sync-Dist | Sync-Conf | Count (n) |
-|------------------------------|----------|------------|-----------|
-| 1p_camera_movement           | 8.455    | 5.432      | 18        |
-| 1p_closeup_facingcamera      | 7.958    | 6.298      | 27        |
-| 1p_emotion                   | 8.073    | 6.214      | 34        |
-| 1p_generalize_chinese        | 8.273    | 4.398      | 4         |
-| 1p_mediumshot_actioncontrol  | 8.386    | 6.241      | 52        |
-| 1p_protrait                  | 8.125    | 6.892      | 38        |
-| 2p_1clip_1talk               | 8.082    | 6.493      | 30        |
-| 2p_2clip_2talk               | 8.601    | 4.951      | 15        |
+| Task |  Model | Sync-Dist. ↓ | Sync-Conf. ↑ |
+|--------|--------|----------------|-----------------|
+| 🧑 Single-Character Monologue (English) <br><sub>Subtasks: 1p_camera_movement, 1p_closeup_facingcamera, <br>1p_emotion, 1p_mediumshot_actioncontrol, 1p_portrait, 2p_1clip_1talk</sub> | MoCha | **8.185** | **6.333** |
+| 👥 Multi-Character Turn-based Dialogue (English) <br><sub>Subtasks: 2p_2clip_2talk</sub> | MoCha | **8.601** | **4.951** |
 
-### Aggregate Group Average
-| Group                            | Distance | Confidence |
-|----------------------------------|----------|------------|
-| Single-character English Monologue (1p_camera_movement + 1p_closeup_facingcamera + 1p_emotion + 1p_mediumshot_actioncontrol + 1p_protrait + 2p_1clip_1talk)  | 8.185    | 6.333      |
-| Turn-based English Dialogue (2p_2clip_2talk)  | 8.601    | 4.951      |
+### Per-SubTask Averages
+
+| SubTask                      | Model | Sync-Dist. ↓ | Sync-Conf. ↑ | Example (n) |
+|-----------------------------|--------|----------------|-----------------|----------------|
+| 1p_camera_movement           | MoCha | 8.455          | 5.432           | 18             |
+| 1p_closeup_facingcamera      | MoCha | 7.958          | 6.298           | 27             |
+| 1p_emotion                   | MoCha | 8.073          | 6.214           | 34             |
+| 1p_generalize_chinese        | MoCha | 8.273          | 4.398           | 4              |
+| 1p_mediumshot_actioncontrol  | MoCha | 8.386          | 6.241           | 52             |
+| 1p_protrait                  | MoCha | 8.125          | 6.892           | 38             |
+| 2p_1clip_1talk               | MoCha | 8.082          | 6.493           | 30             |
+| 2p_2clip_2talk               | MoCha | 8.601          | 4.951           | 15             |
 
 
-
-## Download this repo
-Benchmark and MoChaGeneration Results are embedded in this git repo
-```
-cd local_repo_dir
-git clone https://github.com/congwei1230/MoChaBench.git
-```
 
 ## Evaluate Lip Sync Scores with SyncNet:
 
 ### Download this repo
-Model weights are embedded in this git repo
+[SyncNet Weights](https://github.com/congwei1230/MoChaBench/tree/main/eval-lipsync/weights), [Benchmark](https://github.com/congwei1230/MoChaBench/tree/main/benchmark) and [MoCha's Generation Results](https://github.com/congwei1230/MoChaBench/tree/main/mocha-generation) are embedded in this git repo
 ```
 git clone https://github.com/congwei1230/MoChaBench.git
 ```
@@ -52,7 +61,8 @@ This script is adapted from [joonson/syncnet_python](https://github.com/joonson/
 
 Follows a HuggingFace Diffuser-style structure.
 We provided a
-`SyncNetPipeline` Class located at `eval-lipsync\script\syncnet_pipeline.py`
+`SyncNetPipeline` Class located at `eval-lipsync\script\syncnet_pipeline.py`.
+
 `SyncNetPipeline` can be intialized by providing the weights and configs.
 
 ```
@@ -64,7 +74,7 @@ pipe = SyncNetPipeline(
     device="cuda",          # or "cpu"
 )
 ```
-It has a inference function to score a single pair of video and speech(denoised from audio)
+It has a `inference` function to score a single pair of video and speech(denoised from audio)
 ```
 results = pipe.inference(
     video_path="../example/video.avi",   # RGB video
@@ -76,10 +86,10 @@ results = pipe.inference(
 ### Example Script to run SyncNetPipeline on single pair of (video, speech)
 
 ```
-cd eval-lipsync\script
+cd script
 python run_syncnet_pipeline_on_1example.py
 ```
-You are expected to get
+You are expected to get values close (±0.1 due to ffmpeg version, the version i am using `ffmpeg version 7.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the FFmpeg developers`) to:
 ```
 AV offset:      1
 Min dist:       9.255
@@ -89,14 +99,14 @@ lowest distance   : 9.255396842956543
 per-crop offsets  : [1]
 ```
 
-### Script to run SyncNetPipeline on MoCha Generation Results on MoChaBench
+### Running SyncNetPipeline on MoCha-Generated Videos for MoChaBench Evaluation
 
 ```
 cd eval-lipsync\script
 python run_syncnet_pipeline_on_mocha_generation_on_mocha_bench.py
 ```
 
-### Script to run SyncNetPipeline on Custom Models' Results on MoChaBench
+### Running SyncNetPipeline on Your Model’s Outputs for MoChaBench
 You need to create a folder similar to the structure of ``local_repo_dir/remocha-generation``
 Then modify the 
 ```

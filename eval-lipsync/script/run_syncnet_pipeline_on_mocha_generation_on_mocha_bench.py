@@ -18,7 +18,7 @@ from syncnet_pipeline import SyncNetPipeline
 # ------------------------------------------------------------------ #
 
 # folder that contains *this* script
-ROOT = Path(r"fill with your own repo path/MoChaBench")
+ROOT = Path(__file__).resolve().parents[2] # ROOT = Path(r"/full/path/to/MoChaBench") <<< fill with your own repo path/MoChaBench
 
 # ---- adapt these if you move folders around ---------------------- #
 BASE_VIDEO = ROOT / "mocha-generation"       # e.g. …/MoChaBench/mocha-generation
