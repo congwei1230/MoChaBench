@@ -36,23 +36,25 @@ Thanks to the community for sharing —
 
 <br>
 
-# 🏆 Benchmark
+# 🏆 MoChaBench Leaderboard
 
 
 ### 🧑 Single-Character Monologue (English)
 Including categories: 1p_camera_movement, 1p_closeup_facingcamera, 1p_emotion, 1p_mediumshot_actioncontrol, 1p_portrait, 2p_1clip_1talk
-| Model | Sync-Dist. ↓ | Sync-Conf. ↑ |
+| Method | Sync-Conf. ↑ | Sync-Dist. ↓ |
 |-------|--------------|--------------|
-| MoCha | **8.185**    | **6.333**    |
-
+| MoCha | **6.333**    | **8.185**      |
+| Hallo3 | 4.866    | 8.963       |
+| SadTalker |4.727      |9.239         |
+| AniPortrait| 1.740    | 11.383 |
 ---
 
 ### 👥 Multi-Character Turn-based Dialogue (English)
 Including categories: 2p_2clip_2talk</sub>
 
-| Model | Sync-Dist. ↓ | Sync-Conf. ↑ |
+| Method | Sync-Conf. ↑ | Sync-Dist. ↓ |
 |-------|--------------|--------------|
-| MoCha | **8.601**    | **4.951**    |
+| MoCha | **4.951**    | **8.601**    |
 
 ### Per-Category Averages
 
