@@ -147,9 +147,14 @@ Each file follows the structure:
 ```
 </details>
 
-- **`benchmark.csv`** contains metadata for each sample, with columns:  
-  `idx_in_category`, `category`, `context_id`, `prompt`
-- `speeches` files are generated from `audios` files by using [Demucs_mdx_extra](https://github.com/facebookresearch/demucs). For fair comparison, this should also be used as the input to your own model.
+- **`benchmark.csv`** contains metadata for each sample, with each row specifying:  
+  `idx_in_category`, `category`, `context_id`, `prompt`.
+    
+    We use `benchmark.csv` to connect files. Any file in the benchmark can be located using the combination:  
+  `/benchmark/<data_type>/<category>/<context_id>.<ext>`
+
+- `speeches` files are generated from `audios` files by using [Demucs_mdx_extra](https://github.com/facebookresearch/demucs). For fair comparison, these should also be used as the input to your own model.
+
 - We also provie `first-frames-from-mocha-generation` to facilitate fair comparison for (image + text + audio → video) models 
 
 ## How to Use
@@ -218,10 +223,12 @@ python run_syncnet_pipeline_on_mocha_generation_on_mocha_bench.py
 
 ### Running SyncNetPipeline on Your Model’s Outputs for MoChaBench
 
-To evaluate your own model’s outputs with MoChaBench, first 
-use the `/`
+To evaluate your own model’s outputs with MoChaBench, first use the following inputs to generate videos:
+- **Speech input:** `benchmark/speeches`
+- **Text input:** `prompt` from `benchmark.csv`
+- **Image input:** `benchmark/first-frames-from-mocha-generation` (if your model requires an image condition)
 
-organize your generated videos in a folder that matches the structure of `mocha-generation/`:
+Then organize your generated videos in a folder that matches the structure of `mocha-generation/`:
 
 ```cmd
 <your_outputs_dir>/
@@ -239,7 +246,7 @@ organize your generated videos in a folder that matches the structure of `mocha-
 
 Each video should be named as `<context_id>.mp4` within the corresponding category folder. You don’t need to provide an mp4 for every category—the script will skip any missing videos and report scores for the rest.
 
-Next, modify the script `run_syncnet_pipeline_on_your_own_model_results.py` to point to your model output directory.
+Next, modify the script `run_syncnet_pipeline_on_your_own_model_results.py` to point to your video folder.
 
 Then, run:
 
