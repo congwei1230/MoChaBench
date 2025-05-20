@@ -71,10 +71,10 @@ Including categories: 2p_2clip_2talk</sub>
 
 
 
-# ▶️ Evaluate Lip Sync Scores with SyncNet
+# ▶️ Evaluating Lip Sync Scores
 
 ## Overview
-The SyncNet codebase is adapted from [joonson/syncnet_python](https://github.com/joonson/syncnet_python) for improved API and code structure.
+We use SyncNet for evaluation. The codebase is adapted from [joonson/syncnet_python](https://github.com/joonson/syncnet_python) with improved code structure and a unified API to facilitate evaluation for the community.
 
 Follows a HuggingFace Diffuser-style structure.
 We provided a
@@ -206,8 +206,8 @@ mocha-generation
 ```
 
 To evaluate the results, simply run the pipeline below.  
-This script will output a CSV file at `eval-lipsync/mocha-eval-results/sync_scores.csv`, recording each example’s score.
-
+This script will print the score for each category, as well as the average scores for Monologue and Dialogue.
+It will also output a CSV file at `eval-lipsync/mocha-eval-results/sync_scores.csv`, recording each example’s score.
 ```sh
 cd eval-lipsync\script
 python run_syncnet_pipeline_on_mocha_generation_on_mocha_bench.py
@@ -220,19 +220,21 @@ To evaluate your own model’s outputs with MoChaBench, first organize your gene
 
 ```cmd
 <your_outputs_dir>/
-├─ 1p_camera_movement/
-├─ 1p_closeup_facingcamera/
-├─ 1p_emotion/
-├─ 1p_generalize_chinese/
-├─ 1p_mediumshot_actioncontrol/
-├─ 1p_protrait/
-├─ 2p_1clip_1talk/
-└─ 2p_2clip_2talk/
+    ├─ 1p_camera_movement/
+    │    ├─ 10_man_basketball_camera_push_in.mp4
+    │    │ ...
+    ├─ 1p_closeup_facingcamera/
+    ├─ 1p_emotion/
+    ├─ 1p_generalize_chinese/
+    ├─ 1p_mediumshot_actioncontrol/
+    ├─ 1p_protrait/
+    ├─ 2p_1clip_1talk/
+    └─ 2p_2clip_2talk/
 ```
 
-Each video should be named as `<context_id>.mp4` within the corresponding category folder.
+Each video should be named as `<context_id>.mp4` within the corresponding category folder. You don’t need to provide an mp4 for every category—the script will skip any missing videos and report scores for the rest.
 
-Next, modify the script to point to your model output directory.
+Next, modify the script `run_syncnet_pipeline_on_your_own_model_results.py` to point to your model output directory.
 
 Then, run:
 
