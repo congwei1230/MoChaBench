@@ -213,14 +213,6 @@ cd eval-lipsync\script
 python run_syncnet_pipeline_on_mocha_generation_on_mocha_bench.py
 ```
 
-### Running SyncNetPipeline on Your Model’s Outputs for MoChaBench
-You need to create a folder similar to the structure of ``local_repo_dir/remocha-generation``
-Then modify the 
-```sh
-cd eval-lipsync\script
-python run_syncnet_pipeline_on_mocha_generation_on_mocha_bench.py
-```
-
 
 ### Running SyncNetPipeline on Your Model’s Outputs for MoChaBench
 
