@@ -74,14 +74,13 @@ Including categories: 2p_2clip_2talk</sub>
 # ▶️ Evaluating Lip Sync Scores
 
 ## Overview
-We use SyncNet for evaluation. The codebase is adapted from [joonson/syncnet_python](https://github.com/joonson/syncnet_python) with improved code structure and a unified API to facilitate evaluation for the community.
+We use SyncNet for evaluation. The codebase is adapted from [joonson/syncnet_python](https://github.com/joonson/syncnet_python) with **improved code structure and a unified API** to facilitate evaluation for the community.
 
-Follows a HuggingFace Diffuser-style structure.
+The implementation follows a Hugging Face Diffusers-style structure.
 We provided a
-`SyncNetPipeline` Class located at `eval-lipsync\script\syncnet_pipeline.py`.
+`SyncNetPipeline` Class, located at `eval-lipsync\script\syncnet_pipeline.py`.
 
-`SyncNetPipeline` can be intialized by providing the weights and configs.
-
+You can initialize `SyncNetPipeline` by providing the weights and configs:
 ```python
 pipe = SyncNetPipeline(
     {
@@ -91,7 +90,7 @@ pipe = SyncNetPipeline(
     device="cuda",          # or "cpu"
 )
 ```
-It has an `inference` function to score a single pair of video and speech(with speech denoised from the audio)
+The pipeline offers an `inference` function to score a single pair of video and speech(with speech denoised from the audio)
 ```python
 results = pipe.inference(
     video_path="../example/video.avi",   # RGB video
@@ -100,6 +99,7 @@ results = pipe.inference(
 )
 ```
 
+## Benchmark files
 We provide the benchmark files in the `benchmark/` directory, organized by data type and category.
 
 Each file follows the structure:  
@@ -149,8 +149,9 @@ Each file follows the structure:
 
 - **`benchmark.csv`** contains metadata for each sample, with columns:  
   `idx_in_category`, `category`, `context_id`, `prompt`
-- We provie `first-frames-from-mocha-generation` to facilitate fair comparison for (image + text + audio → video) models 
+- We also provie `first-frames-from-mocha-generation` to facilitate fair comparison for (image + text + audio → video) models 
 
+## How to Use
 ### Download this repo
 [SyncNet Weights](https://github.com/congwei1230/MoChaBench/tree/main/eval-lipsync/weights), [Benchmark](https://github.com/congwei1230/MoChaBench/tree/main/benchmark) and [MoCha's Generation Results](https://github.com/congwei1230/MoChaBench/tree/main/mocha-generation) are embedded in this git repo
 ```sh
