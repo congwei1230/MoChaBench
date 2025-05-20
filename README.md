@@ -159,6 +159,7 @@ git clone https://github.com/congwei1230/MoChaBench.git
 ```sh
 conda create -n mochabench_eval python=3.8
 conda activate mochabench_eval
+cd eval-lipsync
 pip install -r requirements.txt
 # require ffmpeg installed
 ```
