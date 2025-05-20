@@ -54,6 +54,7 @@ Including categories: 2p_2clip_2talk</sub>
 | Method | Sync-Conf. ↑ | Sync-Dist. ↓ |
 |-------|--------------|--------------|
 | MoCha | **4.951**    | **8.601**    |
+---
 
 ### Per-Category Averages
 
@@ -89,7 +90,7 @@ pipe = SyncNetPipeline(
     device="cuda",          # or "cpu"
 )
 ```
-The pipeline offers an `inference` function to score a single pair of video and speech. For fair comparison, the input speech should be a denoised vocal source extracted from your audio. You can use seperator like [Kim_Vocal_2](https://huggingface.co/huangjackson/Kim_Vocal_2) for general noise remvoal and [Demucs_mdx_extra](https://github.com/facebookresearch/demucs)for music removal)
+The pipeline offers an `inference` function to score a single pair of video and speech. For fair comparison, the input speech should be a denoised vocal source extracted from your audio. You can use seperator like [Kim_Vocal_2](https://huggingface.co/huangjackson/Kim_Vocal_2) for general noise remvoal and [Demucs_mdx_extra](https://github.com/facebookresearch/demucs) for music removal
 ```python
 results = pipe.inference(
     video_path="../example/video.avi",   # RGB video
@@ -152,9 +153,9 @@ Each file follows the structure:
     We use `benchmark.csv` to connect files. Any file in the benchmark can be located using the combination:  
   `/benchmark/<data_type>/<category>/<context_id>.<ext>`
 
-- `speeches` files are generated from `audios` files by using [Demucs_mdx_extra](https://github.com/facebookresearch/demucs). For fair comparison, these should also be used as the input to your own model.
+- `speeches` files are generated from `audios` files by using [Demucs_mdx_extra](https://github.com/facebookresearch/demucs). For fair comparison, `speeches` should also be used as the input to your own model instead of `audios`.
 
-- We also provie `first-frames-from-mocha-generation` to facilitate fair comparison for (image + text + audio → video) models 
+- We also provie `first-frames-from-mocha-generation` to facilitate fair comparison for (image + text + audio → video) models. 
 
 ## How to Use
 ### Download this repo
