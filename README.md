@@ -90,11 +90,11 @@ pipe = SyncNetPipeline(
     device="cuda",          # or "cpu"
 )
 ```
-The pipeline offers an `inference` function to score a single pair of video and speech(with speech denoised from the audio)
+The pipeline offers an `inference` function to score a single pair of video and speech. For fair comparison, the input speech should be a denoised vocal source extracted from your audio. You can use seperator like [Kim_Vocal_2](https://huggingface.co/huangjackson/Kim_Vocal_2) for general noise remvoal and [Demucs_mdx_extra](https://github.com/facebookresearch/demucs)for music removal)
 ```python
 results = pipe.inference(
     video_path="../example/video.avi",   # RGB video
-    audio_path="../example/speech.wav",   # speech track (any ffmpeg-readable format)
+    audio_path="../example/speech.wav",   # speech track (must be denoised from audio, ffmpeg-readable format)
     cache_dir="../example/cache",    # optional; omit to auto-cleanup intermediates
 )
 ```
@@ -149,6 +149,7 @@ Each file follows the structure:
 
 - **`benchmark.csv`** contains metadata for each sample, with columns:  
   `idx_in_category`, `category`, `context_id`, `prompt`
+- `speeches` files are generated from `audios` files by using [Demucs_mdx_extra](https://github.com/facebookresearch/demucs). For fair comparison, this should also be used as the input to your own model.
 - We also provie `first-frames-from-mocha-generation` to facilitate fair comparison for (image + text + audio → video) models 
 
 ## How to Use
@@ -210,14 +211,17 @@ To evaluate the results, simply run the pipeline below.
 This script will print the score for each category, as well as the average scores for Monologue and Dialogue.
 It will also output a CSV file at `eval-lipsync/mocha-eval-results/sync_scores.csv`, recording each example’s score.
 ```sh
-cd eval-lipsync\script
+cd eval-lipsync/script
 python run_syncnet_pipeline_on_mocha_generation_on_mocha_bench.py
 ```
 
 
 ### Running SyncNetPipeline on Your Model’s Outputs for MoChaBench
 
-To evaluate your own model’s outputs with MoChaBench, first organize your generated videos in a folder that matches the structure of `mocha-generation/`:
+To evaluate your own model’s outputs with MoChaBench, first 
+use the `/`
+
+organize your generated videos in a folder that matches the structure of `mocha-generation/`:
 
 ```cmd
 <your_outputs_dir>/
