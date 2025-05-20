@@ -1,6 +1,6 @@
 # MoChaBench
 
-This repo contains the `Benchmark`, `Evaluation Code` and `MoCha's Generation Results` for [MoCha
+This repo contains the `Benchmark`, `Standard Evaluation Codebase` and `MoCha's Generation Results` for [MoCha
 Towards Movie-Grade Talking Character Synthesis](https://arxiv.org/pdf/2503.23307).
 
 <a target="_blank" href="https://arxiv.org/pdf/2503.23307">
