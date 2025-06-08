@@ -40,7 +40,7 @@ Many thanks to the community for sharing —
 ## 📑 Table of Contents
 
 - [🏆 MoChaBench Leaderboard](#-mochabench-leaderboard)
-- [▶️ Evaluating Lip Sync Scores](#evaluating-lip-sync-scores)
+- ▶️ Evaluating Lip Sync Scores
   - [Overview](#overview)
   - [Benchmark files](#benchmark-files)
   - [How to Use](#how-to-use)
@@ -50,7 +50,8 @@ Many thanks to the community for sharing —
     - [Running SyncNetPipeline on MoCha-Generated Videos for MoChaBench Evaluation](#running-syncnetpipeline-on-mocha-generated-videos-for-mochabench-evaluation)
     - [Running SyncNetPipeline on Your Model’s Outputs for MoChaBench](#running-syncnetpipeline-on-your-models-outputs-for-mochabench)
   - [🧩 Custom Benchmark Evaluation](#-custom-benchmark-evaluation)
-- [▶️ Evaluating VIEScore with GPT-4o](#evaluating-viescore-with-gpt-4o)
+- ▶️ Evaluating VIEScore
+  - [Evaluating with GPT-4o](#evaluating-with-gpt-4o)
   - [Evaluating Alignment with Human Ratings](#evaluating-alignment-with-human-ratings)
 - [📚 Citation](#-citation)
 
@@ -302,8 +303,9 @@ for example in dataset:
 # After processing all samples, compute average results.
 ```
 
-# ▶️ Evaluating VIEScore with GPT-4o
+# ▶️ Evaluating VIEScore
 
+## Evaluating with GPT-4o
 We provide example scripts for running **GPT-4o-based evaluation** on 20 examples from MoChaBench, covering 4 models and 4 evaluation aspects.
 
 ```
