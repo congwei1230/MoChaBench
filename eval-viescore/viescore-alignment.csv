@@ -1,0 +1,23 @@
+Model,MoCha,MoCha,MoCha,MoCha,MoCha,MoCha,MoCha,MoCha,Hallo3,Hallo3,Hallo3,Hallo3,Hallo3,Hallo3,Hallo3,Hallo3,Aniportrait,Aniportrait,Aniportrait,Aniportrait,Aniportrait,Aniportrait,Aniportrait,Aniportrait,SadTalker,SadTalker,SadTalker,SadTalker,SadTalker,SadTalker,SadTalker,SadTalker
+Aspect,2. Facial Expression Naturalness,2. Facial Expression Naturalness,3. Action Naturalness,3. Action Naturalness,4. Text Alignment,4. Text Alignment,5. Visual Quality,5. Visual Quality,2. Facial Expression Naturalness,2. Facial Expression Naturalness,3. Action Naturalness,3. Action Naturalness,4. Text Alignment,4. Text Alignment,5. Visual Quality,5. Visual Quality,2. Facial Expression Naturalness,2. Facial Expression Naturalness,3. Action Naturalness,3. Action Naturalness,4. Text Alignment,4. Text Alignment,5. Visual Quality,5. Visual Quality,2. Facial Expression Naturalness,2. Facial Expression Naturalness,3. Action Naturalness,3. Action Naturalness,4. Text Alignment,4. Text Alignment,5. Visual Quality,5. Visual Quality
+Example idx,Human Major Vote,GPT4o,Human Major Vote,GPT4o,Human Major Vote,GPT4o,Human Major Vote,GPT4o,Human Major Vote,GPT4o,Human Major Vote,GPT4o,Human Major Vote,GPT4o,Human Major Vote,GPT4o,Human Major Vote,GPT4o,Human Major Vote,GPT4o,Human Major Vote,GPT4o,Human Major Vote,GPT4o,Human Major Vote,GPT4o,Human Major Vote,GPT4o,Human Major Vote,GPT4o,Human Major Vote,GPT4o
+1,3,4,4,4,4,4,4,4,3,3,2,4,2,3,2,2,1,2,1,3,1,3,1,2,1,3,1,4,1,4,3,3
+2,4,4,4,4,4,4,4,4,2,4,2,4,2,4,2,4,1,3,1,4,1,4,2,4,1,4,1,4,1,4,3,4
+3,4,4,4,4,4,4,3,4,3,4,2,4,2,4,2,4,1,3,1,4,1,4,1,2,1,4,1,4,1,4,3,2
+4,4,4,4,4,4,4,4,4,2,4,2,4,2,4,2,3,1,3,1,4,1,3,4,4,1,4,1,4,1,4,3,4
+5,4,3,2,4,3,4,4,4,2,4,3,4,3,3,3,4,1,3,1,1,1,2,2,2,1,3,1,3,1,3,3,4
+6,4,4,4,4,4,4,3,2,2,4,2,4,3,4,2,2,1,3,1,4,1,4,2,2,1,3,1,2,1,3,3,2
+7,2,4,3,4,3,4,3,4,3,4,2,4,3,4,2,3,1,3,1,4,1,4,2,3,1,2,1,2,1,4,2,2
+8,4,4,4,4,4,4,4,4,1,3,1,4,2,4,2,4,1,1,1,1,1,2,1,1,1,4,1,4,1,4,3,4
+9,4,4,4,4,4,3,4,3,3,3,3,4,3,3,2,2,1,2,1,2,1,4,1,2,1,3,1,2,1,4,3,2
+10,4,3,4,4,3,3,4,4,2,3,2,4,3,4,2,3,1,3,1,4,1,2,1,4,1,2,1,3,1,3,3,2
+11,4,3,4,4,4,3,4,4,3,3,3,4,2,4,2,3,1,4,1,4,1,3,1,2,1,3,1,3,1,4,3,3
+12,4,4,4,4,4,4,3,4,2,4,2,4,2,4,3,4,1,3,1,4,1,3,2,2,1,3,1,4,1,2,3,4
+13,4,4,4,4,4,4,3,4,1,3,2,4,2,4,2,4,1,3,1,4,2,4,2,2,1,3,1,4,1,4,3,3
+14,4,4,4,4,4,4,4,4,2,4,1,4,2,4,3,3,1,3,1,4,1,4,1,3,1,4,1,4,1,4,3,3
+15,4,4,4,4,4,4,3,4,1,4,1,4,2,4,2,2,1,2,1,3,1,2,1,2,1,4,1,4,1,2,3,4
+16,3,3,3,4,4,4,4,3,2,3,3,4,3,4,4,2,1,2,1,4,1,4,1,2,1,3,1,4,1,4,3,2
+17,4,4,4,4,4,4,4,4,2,4,2,4,2,4,3,4,1,3,1,4,1,4,1,4,1,3,1,4,1,4,3,4
+18,4,3,4,4,4,4,4,4,2,4,2,4,2,2,2,4,1,3,1,4,1,2,1,3,1,4,1,4,1,4,3,4
+19,4,4,4,4,4,4,4,4,3,4,2,4,2,2,2,4,1,4,1,4,1,2,1,4,1,4,1,4,1,2,3,4
+20,4,4,4,4,4,4,4,4,4,4,3,4,3,4,3,3,1,2,1,2,1,4,1,2,1,3,1,4,1,4,3,4

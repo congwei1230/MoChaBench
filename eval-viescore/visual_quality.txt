@@ -1,0 +1,16 @@
+Visual Quality
+Definition: Measures visual fidelity, checking for any artifacts, discontinuities (e.g., in limbs, facial glitches, finger artifacts), or rendering issues.
+Scale:
+1 – Severe artifacts
+2 – Noticeable artifacts
+3 – Mostly(80%) no artifacts 
+4 – Flawless visuals (90%+)
+Given the provided video, provide a reasoning, then give me a score for me.
+You will have to give your output in this way (Keep your reasoning concise and short.):
+```json
+{
+  "reasoning": "...",
+  "score": ...,
+}
+```
+and don't output anything else.

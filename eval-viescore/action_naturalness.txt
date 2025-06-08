@@ -1,0 +1,16 @@
+Action Naturalness
+Definition: Evaluates whether the character's body movements, gestures, and timing align naturally with the context.
+Scale:
+1 – Completely unnatural
+2 – Noticeably unnatural 
+3 – Mostly natural
+4 – Indistinguishable from real movie or TV character
+Given the provided video, provide a reasoning, then give me a score for me.
+You will have to give your output in this way (Keep your reasoning concise and short.):
+```json
+{
+  "reasoning": "...",
+  "score": ...,
+}
+```
+and don't output anything else.

@@ -1,0 +1,16 @@
+Facial Expression Naturalness
+Definition: Evaluates whether the lip-sync and facial expressions appear natural and coherent with the context, without looking robotic or exaggerated or unnatural jumps
+Scale:
+1 – Completely unnatural
+2 – Noticeably synthetic or stiff
+3 – Mostly natural and believable (80%)
+4 – Indistinguishable from real video or cinematic performance (90%+)
+Given the provided video, provide a reasoning, then give me a score for me.
+You will have to give your output in this way (Keep your reasoning concise and short.):
+```json
+{
+  "reasoning": "...",
+  "score": ...,
+}
+```
+and don't output anything else.

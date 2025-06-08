@@ -1,0 +1,18 @@
+Text Alignment
+Definition: Determines how well the generated actions and expressions follow the intended behavior or scene described in the text prompt.
+Focus on character's actions and expressions and camera movements.
+Scale:
+1 – No alignment 0%
+2 – Partial alignment (<50%)
+3 – Mostly alignment (80%)
+4 – Perfect alignment with prompt (>90%)
+Given the provided video, provide a reasoning, then give me a score for me.
+You will have to give your output in this way (Keep your reasoning concise and short.):
+```json
+{
+  "reasoning": "...",
+  "score": ...,
+}
+```
+and don't output anything else.
+Here is the text prompt <PROMPT>
