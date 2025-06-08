@@ -281,6 +281,27 @@ for example in dataset:
 # After processing all samples, compute average results.
 ```
 
+# ▶️ Evaluating VIEScore with GPT-4o
+
+We provide example scripts for running **GPT-4o-based evaluation** on 20 examples from MoChaBench, covering 4 models and 4 evaluation aspects.
+
+```
+conda activate mochabench
+pip install openai opencv-python
+cd eval-viescore
+python eval_gpt_viescore.py
+```
+
+## Evaluating Alignment with Human Ratings
+We also provide a script to compute the agreement between GPT-4o scores and human majority vote ratings:
+```
+conda activate mochabench
+pip install scikit-learn
+cd eval-viescore
+python compute_alignment.py
+```
+This script outputs alignment metrics (QWK, Spearman ρ, Footrule, MAE) for each aspect and overall.
+
 
 # 📚 Citation
 
