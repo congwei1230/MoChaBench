@@ -36,6 +36,27 @@ Many thanks to the community for sharing —
 
 <br>
 
+
+## 📑 Table of Contents
+
+- [🏆 MoChaBench Leaderboard](#-mochabench-leaderboard)
+- [▶️ Evaluating Lip Sync Scores](#️-evaluating-lip-sync-scores)
+  - [Overview](#overview)
+  - [Benchmark files](#benchmark-files)
+  - [How to Use](#how-to-use)
+    - [Download this repo](#download-this-repo)
+    - [Dependencies](#dependencies)
+    - [Example Script to run SyncNetPipeline on single pair of (video, speech)](#example-script-to-run-syncnetpipeline-on-single-pair-of-video-speech)
+    - [Running SyncNetPipeline on MoCha-Generated Videos for MoChaBench Evaluation](#running-syncnetpipeline-on-mocha-generated-videos-for-mochabench-evaluation)
+    - [Running SyncNetPipeline on Your Model’s Outputs for MoChaBench](#running-syncnetpipeline-on-your-models-outputs-for-mochabench)
+  - [🧩 Custom Benchmark Evaluation](#-custom-benchmark-evaluation)
+- [▶️ Evaluating VIEScore with GPT-4o](#️-evaluating-viescore-with-gpt-4o)
+  - [Evaluating Alignment with Human Ratings](#evaluating-alignment-with-human-ratings)
+- [📚 Citation](#citation)
+
+<br>
+
+
 # 🏆 MoChaBench Leaderboard
 
 
@@ -261,7 +282,7 @@ python run_syncnet_pipeline_on_your_own_model_results.py
 ```
 The script will output a CSV file at `eval-lipsync/your own model-eval-results/sync_scores.csv` with the evaluation scores for each example.
 
-## Custom Benchmark Evaluation
+## 🧩 Custom Benchmark Evaluation
 
 Since our pipeline provides an API to score a pair of (video, audio), you can easily adapt it for other benchmark datasets by looping through your examples:
 ```PYTHON
