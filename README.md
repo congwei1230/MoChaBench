@@ -8,11 +8,16 @@ Towards Movie-Grade Talking Character Synthesis](https://arxiv.org/pdf/2503.2330
 <a target="_blank" href="https://congwei1230.github.io/MoCha/">
 <img style="height:19pt" src="https://img.shields.io/badge/-🌐%20Website-black?style=flat"></a>
 <a target="_blank" href="https://huggingface.co/datasets/CongWei1230/MoChaBench">
+<br>
+<a target="_blank" href="https://github.com/congwei1230/MoCha-Demo">
+<img style="height:19pt" src="https://img.shields.io/badge/-Code-red?style=flat&logo=github"></a>
 <a target="_blank" href="https://github.com/congwei1230/MoChaBench/tree/main/benchmark">
 <img style="height:19pt" src="https://img.shields.io/badge/-MoChaBench-red?style=flat&logo=github"></a>
 <a target="_blank" href="https://github.com/congwei1230/MoChaBench/tree/main/mocha-generation">
 <img style="height:19pt" src="https://img.shields.io/badge/-Our Results on MoChaBench-red?style=flat&logo=github"></a>
 <br>
+<a target="_blank" href="https://huggingface.co/CongWei1230/MoCha-Demo">
+<img style="height:19pt" src="https://img.shields.io/badge/-🤗%20Model-yellow?style=flat"></a>
 <a target="_blank" href="https://huggingface.co/datasets/CongWei1230/MoChaBench">
 <img style="height:19pt" src="https://img.shields.io/badge/-🤗%20 MoChaBench HF Version-yellow?style=flat"></a>
 <a target="_blank" href="https://huggingface.co/datasets/CongWei1230/MoCha-Generation-on-MoChaBench">
@@ -35,6 +40,13 @@ Many thanks to the community for sharing —
 </div>
 
 <br>
+
+
+## 🔔News
+
+- **🔥[2025-12-27]: Released a demo implementation built on HunyuanVideo — [**🤗 Checkpoints**](https://huggingface.co/CongWei1230/MoCha-Demo) and [**Code**](https://github.com/congwei1230/MoCha-Demo)**
+
+
 
 
 ## 📑 Table of Contents
